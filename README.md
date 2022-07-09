@@ -1,10 +1,10 @@
-## 使い方
+# hatenablog
 
 このリポジトリは https://seasawher.github.io/hatenablog/ というURLでWebページとして公開されています．
 
 CSS ファイルのパスは https://seasawher.github.io/hatenablog/style.css です．
 
-### 手順１
+## 手順
 
 CSSを適用するには
 
@@ -14,7 +14,7 @@ CSSを適用するには
 
 というコードをHTMLのhead要素のところに貼り付けます．
 
-### 補足
+## 補足
 
 CSSファイルに直接
 
@@ -27,7 +27,7 @@ CSSファイルに直接
 * 参考: https://minebox.hateblo.jp/entry/2018/09/08/232217
 
 
-### スタイルが更新されないとき
+## スタイルが更新されないとき
 
 `F12` キーを押すなどしてブラウザの開発者ツールを開いてください．
 
