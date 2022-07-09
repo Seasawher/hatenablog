@@ -1,3 +1,52 @@
-h1 {
-    color: red;
+/* コードブロックの背景色などを変える */
+.entry-content pre.code {
+    font-size: .8rem;
+    margin: 1.5rem 0;
+    padding: 1.5rem 0.5rem;
+    background-color: #364549;
+    color: #e3e3e3;
+}
+
+/*コードブロックにおける言語名表示*/
+.entry-content pre.code:not([data-lang=""]) {
+    padding: 2.3rem 0.5rem 1.5rem;
+}
+.entry-content pre.code:not([data-lang=""]):before {
+    content: attr(data-lang);
+    display: inline-block;
+    color: #eee;
+    background-color: #777;
+    padding: 2px 4px;
+    position: absolute;
+    transform: translateY(-2.3rem);
+    word-break: break-all;
+}
+    
+/* 引用 */
+.entry-content blockquote {
+    position: relative;
+    padding: 10px 15px 10px 50px;
+    box-sizing: border-box;
+    background: #efefef;
+    color: #555;
+}
+
+/* 引用 */
+.entry-content blockquote p {
+    padding: 0;
+    margin: 10px 0;
+    line-height: 1.7;
+}
+
+/* 引用　cite部分 */
+.entry-content blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
+}
+
+/* mermaid の図を中央寄せする */
+.mermaid {
+    text-align: center;
 }
