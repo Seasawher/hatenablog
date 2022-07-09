@@ -1,3 +1,9 @@
+/* 「このブログについて」を表示しない */
+div.profile-about {
+    display: none;
+}
+
+
 /* 引用 */
 .entry-content blockquote {
     position: relative;
