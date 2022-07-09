@@ -38,7 +38,8 @@ div.profile-about {
     display: block;
     text-decoration:none;
     transition: 0.3s;
-    background: #c7d0fa;
+    /* background: #c7d0fa; */
+    color: green;
 }
 
 .blueframe {
