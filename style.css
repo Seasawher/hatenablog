@@ -38,7 +38,7 @@ div.profile-about {
     display: block;
     text-decoration:none;
     transition: 0.3s;
-    /* background: #c7d0fa; */
+    background: #e2e2e2;
     color: green;
     font-weight: 800;
 }
