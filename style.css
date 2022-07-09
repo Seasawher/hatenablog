@@ -1,3 +1,74 @@
+
+    
+/* 引用 */
+.entry-content blockquote {
+    position: relative;
+    padding: 10px 15px 10px 50px;
+    box-sizing: border-box;
+    background: #efefef;
+    color: #555;
+}
+
+/* 引用 p要素 */
+.entry-content blockquote p {
+    padding: 0;
+    margin: 10px 0;
+    line-height: 1.7;
+}
+
+/* 引用　cite部分 */
+.entry-content blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
+}
+
+/* mermaid の図を中央寄せする */
+.mermaid {
+    text-align: center;
+}
+
+/* サイドバーのカレンダーのリンクを目立たせる */
+.calendar-day a { /* 記事へのリンク */
+    display: block;
+    text-decoration:none;
+    transition: 0.3s;
+    background: #c7d0fa;
+}
+
+.blueframe {
+    color: #3f87ce; /*文字色*/
+    background-color: #e4fcff;/*背景色*/
+    padding: 10pt;
+    border: solid 3px #c6e4ff;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    margin-bottom: 19px;
+    margin-top: 19px;
+}
+
+.redframe {
+    color: #ff7d6e; /*文字色*/
+    background-color: #ffeaea;/*背景色*/
+    padding: 10pt;
+    border: solid 3px #ffc3c3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    margin-bottom: 19px;
+    margin-top: 19px;
+}
+
+/* 灰色の枠 */
+.grayframe {
+    color: #808080; /*文字色*/
+    background-color: #f4f4f4;/*背景色*/
+    padding: 10pt;
+    border-radius: 10px;/*角の丸み*/
+    border: solid 3px #efefef;/*線*/
+    margin-bottom: 19px;
+    margin-top: 19px;
+}
+
+
 /* コードブロックの背景色などを変える */
 .entry-content pre.code {
     font-size: .8rem;
@@ -22,31 +93,96 @@
     word-break: break-all;
 }
     
-/* 引用 */
-.entry-content blockquote {
-    position: relative;
-    padding: 10px 15px 10px 50px;
-    box-sizing: border-box;
-    background: #efefef;
-    color: #555;
+
+
+
+
+/*-------------*/
+/*  追尾する目次  */
+/*-------------*/
+#stoc-module {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#stoc-module.tracking {
+  margin-bottom: 0;
+}
+#stoc-module.fixed {
+  position: fixed;
+}
+#stoc-module.absolute {
+  position: absolute;
+}
+#stoc-module.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+#stoc-module.fade-in {
+  animation: fadeIn 300ms;
+}
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
 }
 
-/* 引用 */
-.entry-content blockquote p {
-    padding: 0;
-    margin: 10px 0;
-    line-height: 1.7;
+#stoc {
+  overflow-y: auto;
+}
+#stoc.shadow {
+  /* Shadows */
+  background:
+    radial-gradient(farthest-side at top, rgba(0,0,0,.17), transparent) top / 100% 11px,
+    radial-gradient(farthest-side at bottom, rgba(0,0,0,.17), transparent) bottom / 100% 11px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+#stoc ol {
+  margin: 0;
+  padding: 0 0 0 1em;
+  list-style-type: none;
+}
+#stoc > ol {
+  padding-left: 0;
+}
+#stoc.shadow > ol {
+  /* Shadow covers */
+  background:
+    linear-gradient(#fff 30%, transparent) top / 100% 40px,
+    linear-gradient(transparent, #fff 70%) bottom / 100% 40px;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  overflow-y: hidden;
+}
+/*#stoc li {
+  /~ margin: 3px 0; ~/
+}*/
+#stoc a {
+  padding: 2px 2px 2px 6px;
+  display: block;
+  text-decoration: none;
+  /* color: #777; */
+}
+#stoc:not(.touch) a:hover {
+  background-color: rgba(0,0,0,.05);
+  /* text-decoration: underline; */
+  /* color: #222; */
+}
+#stoc .active {
+  background-color: rgba(0,0,0,.05);
+  /* color: #222; */
 }
 
-/* 引用　cite部分 */
-.entry-content blockquote cite {
-    display: block;
-    text-align: right;
-    color: #888888;
-    font-size: 0.9em;
+#stoc::-webkit-scrollbar {
+  width: 8px;
+  background: #ececec;
+}
+#stoc::-webkit-scrollbar-button {
+  display: none;
+}
+#stoc::-webkit-scrollbar-thumb {
+  background: #b1b1b1;
 }
 
-/* mermaid の図を中央寄せする */
-.mermaid {
-    text-align: center;
+[tabindex="-1"]:focus {
+  outline: 0;
 }
