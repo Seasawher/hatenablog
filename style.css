@@ -40,6 +40,7 @@ div.profile-about {
     transition: 0.3s;
     /* background: #c7d0fa; */
     color: green;
+    font-weight: bold;
 }
 
 .blueframe {
