@@ -4,6 +4,8 @@
 
 CSS ファイルのパスは https://seasawher.github.io/hatenablog/style.css です．
 
+### 手順１
+
 CSSを適用するには
 
 ```html
@@ -12,8 +14,20 @@ CSSを適用するには
 
 というコードをHTMLのhead要素のところに貼り付けます．
 
+### 補足
 
-## スタイルが更新されないとき
+CSSファイルに直接
+
+```css
+@import url("https://seasawher.github.io/hatenablog/style.css")
+```
+
+と記述してもうまくいきません．
+
+* 参考: https://minebox.hateblo.jp/entry/2018/09/08/232217
+
+
+### スタイルが更新されないとき
 
 `F12` キーを押すなどしてブラウザの開発者ツールを開いてください．
 
